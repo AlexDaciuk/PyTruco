@@ -4,15 +4,19 @@ players = []
 
 class deck:
     def __init__(self):
+
         deck = []
         self.deck = deck
+
         types = ["oro","basto","espada","copas"]
+
         for card_type in types:
             for i in list(range(1,13,1)):
                 if i == 8 or i == 9:
                     pass
                 else:
                     deck.append(str(i)+"_de_"+card_type)
+
         modifiable_deck = deck
         self.modifiable_deck = modifiable_deck
         
@@ -32,8 +36,10 @@ class player:
     def __init__(self):
         card_quantity = 0
         self.card_quantity = card_quantity
+
         card_list = []
         self.card_list = card_list
+
         players.append(self)
         
     def show_cards(self):
