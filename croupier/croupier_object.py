@@ -1,5 +1,6 @@
 #we import random from choice
 from random import choice
+import sys
 players = []
 
 class deck:
@@ -7,7 +8,6 @@ class deck:
 
         deck = []
         self.deck = deck
-
         types = ["oro","basto","espada","copas"]
 
         for card_type in types:
@@ -44,14 +44,21 @@ class player:
         
     def show_cards(self):
         print(self.card_list)
-        
-deck1 = deck()
 
-player_1 = player()
+try:
+    sys.argv[1] == 4
+    deck1 = deck()
+    quantity = list(range(1,(int(sys.argv[1]))+1))
+    for i in quantity:
+        player_i = player() 
+    deck1.croupier(players)
+    
+                    
+except(IndexError):
+    deck1 = deck()
+    quantity = list(range(1,3))
+    for i in quantity:
+        player_i = player()
+    deck1.croupier(players)
+    
 
-player_2 = player()
-
-deck1.croupier(players)
-
-player_1.show_cards()
-player_2.show_cards()
