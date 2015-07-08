@@ -58,3 +58,6 @@ class Deck():
 		# We dont use 8s and 9s for this particular card game                                                                                         
                 if ( number != 8 or number != 9):
                     cardList.append( card(number, figure, value) )
+                    
+   def getCompleteDeck():
+   	return self.cardList
