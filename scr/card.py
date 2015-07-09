@@ -6,7 +6,7 @@ class Card:
         if (number > 0 and number < 13):
             self.number = number
     
-        if figure is in ("ORO", "BASTO", "ESPADA", "COPA"): 
+        if figure in ["ORO", "BASTO", "ESPADA", "COPA"]: 
              self.figure = figure
              
         self.value = value

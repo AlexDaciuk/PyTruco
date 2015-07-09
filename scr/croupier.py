@@ -8,7 +8,7 @@ class Croupier():
 
     # Class constructor, it creates a full deck
     def __init__(self):
-        self.deck = Deck()
+        self.deck = deck.Deck()
 
     # We duplicate the original deck to work with the duplicate one
     def startGiving(self):
@@ -17,13 +17,15 @@ class Croupier():
     # Method that returns a list of 3 cards 'randomly' picked 
     def givePlayer(self):
 
+        self.playerCardSet = []
+        
         # First we reverse the deck, just to get a little more random
-        self.workDeck.reverse()
+        #self.workDeck.reverse()
 
         # We pick 3 cards and put them on a list
         for i in range(1,3,1):
-            playerCardSet.append( self.workDeck.pop( random.choice( self.workDeck) ) )
+            self.playerCardSet.append( self.workDeck.getRandomCard() ) )
 
-        return playerCardSet
+        return self.playerCardSet
         
         
